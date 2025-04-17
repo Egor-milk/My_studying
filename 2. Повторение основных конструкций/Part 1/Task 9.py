@@ -7,9 +7,11 @@ def test(input_values, output_values):
         print()
 
 def spell(*args):
+    args = [i.lower() for i in args]
     dictionary = dict()
-    for i in args:
-        dictionary[i] = max(dictionary.get(i, 0), len(i))
+    for key in args:
+        dictionary[key[0]] = max(dictionary.get(key[0], 0), len(key))
+    return dictionary
 
 
 
