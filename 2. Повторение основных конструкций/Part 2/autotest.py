@@ -1,12 +1,12 @@
 import os
 # функции для автотестов как на степике
 
-def take_all_files(directory='D:/programm/pycharm/My_studying/files_to_test'):
+def take_all_files(directory='D:/programm/PythonProjects/autotest'):
     files = os.listdir(directory)
     return files
 
 
-def take_input_output_values(all_files, directory='D:/programm/pycharm/My_studying/files_to_test'):
+def take_input_output_values(all_files, directory='D:/programm/PythonProjects/autotest'):
     input_values = []
     output_values = []
     for i in all_files:
