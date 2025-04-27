@@ -1,12 +1,16 @@
 import os
 # функции для автотестов как на степике
 
-def take_all_files(directory='D:/programm/PythonProjects/autotest'):
+basedir = os.path.abspath(os.getcwd())
+basedir = basedir[:basedir.find('My_studying') + 11]
+
+
+def take_all_files(directory=basedir + '\\autotest'):
     files = os.listdir(directory)
     return files
 
 
-def take_input_output_values(all_files, directory='D:/programm/PythonProjects/autotest'):
+def take_input_output_values(all_files, directory=basedir + '\\autotest'):
     input_values = []
     output_values = []
     for i in all_files:
