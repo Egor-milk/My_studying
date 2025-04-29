@@ -17,7 +17,7 @@ data = [('07:14', '08:46'),
         ('17:57', '19:21'),
         ('19:30', '19:59')]
 
-for i in data:
-        pass
+data = [(datetime.strptime(i[1], '%H:%M') - datetime.strptime(i[0], '%H:%M')).seconds for i in data]
+print(sum(data) / 60)
 
 
