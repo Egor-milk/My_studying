@@ -12,15 +12,15 @@ def main(inp_values, out_values):
 def oldest(lst):
     lst = lst[1:]
     lst = [[f'{i.split()[0]} {i.split()[1]}', datetime.strptime(i.split()[2], '%d.%m.%Y')] for i in lst]
-    maxi = max(lst, key=lambda x: x[1])[1]
+    mini = min(lst, key=lambda x: x[1])[1]
     answer = []
     for i in lst:
-        if i[1] == maxi:
+        if i[1] == mini:
             answer.append(i[0])
     if len(answer) > 1:
-        return f'{datetime.strftime(maxi, "%d.%m.%Y")} {len(answer)}'
+        return f'{datetime.strftime(mini, "%d.%m.%Y")} {len(answer)}'
     elif len(answer) == 1:
-        return f'{datetime.strftime(maxi, "%d.%m.%Y")} {answer}'
+        return f'{datetime.strftime(mini, "%d.%m.%Y")} {answer[0]}'
     else:
         return None
 
