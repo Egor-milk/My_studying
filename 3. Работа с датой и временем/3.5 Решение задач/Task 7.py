@@ -14,14 +14,14 @@ def nearest_birth(lst):
     nearest_date = []
     answer = []
     for i in range(1, 8):
-        nearest_date.append(today_date + timedelta(days=i))
+        nearest_date.append(today_date.replace(year = 1970) + timedelta(days=i)) # Присвоено 1970, так как год не важен
     lst = lst[2:]
     for i, item in enumerate(lst):
         temp = [f'{item.split()[0]} {item.split()[1]}', datetime.strptime(item.split()[2], '%d.%m.%Y')]
-        if temp[1].replace(year=today_date.year) in nearest_date:
+        if temp[1].replace(year=1970) in nearest_date:
             answer.append(temp)
     if len(answer) != 0:
-        return max(answer, key=lambda x: x[1])#min(lst, key=lambda x: x[1])[0]#проблема с годами тут где то
+        return max(answer, key=lambda x: x[1])
     else:
         return 'Дни рождения не планируются'
 
