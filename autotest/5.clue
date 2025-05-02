@@ -1,1 +1,10 @@
-До выхода курса осталось: 20 минут
+False
+True
+False
+False
+True
+False
+True
+False
+False
+False

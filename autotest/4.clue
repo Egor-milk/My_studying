@@ -1,1 +1,8 @@
-До выхода курса осталось: 3 часа
+False
+False
+False
+True
+False
+False
+True
+False

@@ -1,1 +1,4 @@
-До выхода курса осталось: 2 дня
+False
+True
+False
+False
