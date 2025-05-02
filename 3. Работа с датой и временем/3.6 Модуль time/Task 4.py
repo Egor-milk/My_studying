@@ -28,3 +28,6 @@ def list_comprehension(): # с использованием списочного
 
 
 print(get_the_fastest_func([for_and_append, list_comprehension]))
+
+print(calc_time_to_run(for_and_append))
+print(calc_time_to_run(list_comprehension))
