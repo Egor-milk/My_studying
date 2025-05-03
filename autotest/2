@@ -1,1 +1,1 @@
-print(get_days_in_month(2005, 'February'))
+print(get_all_mondays(994))
