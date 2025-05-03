@@ -1,1 +1,1 @@
-Wednesday
+30
