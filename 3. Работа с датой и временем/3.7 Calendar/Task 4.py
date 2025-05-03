@@ -13,7 +13,7 @@ def main(inp_values, out_values):
 
 
 def func_monthrange(year_and_month):
-    year, month = [int(i) for i in year_and_month]
+    year, month = int(year_and_month[0]), list(calendar.month_name).index(year_and_month[1])
     return calendar.monthrange(year, month)[1]
 
 inp, out = (take_input_output_values(take_all_files()))
