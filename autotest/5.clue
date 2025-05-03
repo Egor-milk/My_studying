@@ -1,1 +1,1 @@
-Thursday
+31
