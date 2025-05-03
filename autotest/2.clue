@@ -1,1 +1,12 @@
-[datetime.date(994, 1, 6), datetime.date(994, 1, 13), datetime.date(994, 1, 20), datetime.date(994, 1, 27), datetime.date(994, 2, 3), datetime.date(994, 2, 10), datetime.date(994, 2, 17), datetime.date(994, 2, 24), datetime.date(994, 3, 3), datetime.date(994, 3, 10), datetime.date(994, 3, 17), datetime.date(994, 3, 24), datetime.date(994, 3, 31), datetime.date(994, 4, 7), datetime.date(994, 4, 14), datetime.date(994, 4, 21), datetime.date(994, 4, 28), datetime.date(994, 5, 5), datetime.date(994, 5, 12), datetime.date(994, 5, 19), datetime.date(994, 5, 26), datetime.date(994, 6, 2), datetime.date(994, 6, 9), datetime.date(994, 6, 16), datetime.date(994, 6, 23), datetime.date(994, 6, 30), datetime.date(994, 7, 7), datetime.date(994, 7, 14), datetime.date(994, 7, 21), datetime.date(994, 7, 28), datetime.date(994, 8, 4), datetime.date(994, 8, 11), datetime.date(994, 8, 18), datetime.date(994, 8, 25), datetime.date(994, 9, 1), datetime.date(994, 9, 8), datetime.date(994, 9, 15), datetime.date(994, 9, 22), datetime.date(994, 9, 29), datetime.date(994, 10, 6), datetime.date(994, 10, 13), datetime.date(994, 10, 20), datetime.date(994, 10, 27), datetime.date(994, 11, 3), datetime.date(994, 11, 10), datetime.date(994, 11, 17), datetime.date(994, 11, 24), datetime.date(994, 12, 1), datetime.date(994, 12, 8), datetime.date(994, 12, 15), datetime.date(994, 12, 22), datetime.date(994, 12, 29)]
+16.01.2020
+20.02.2020
+19.03.2020
+16.04.2020
+21.05.2020
+18.06.2020
+16.07.2020
+20.08.2020
+17.09.2020
+15.10.2020
+19.11.2020
+17.12.2020

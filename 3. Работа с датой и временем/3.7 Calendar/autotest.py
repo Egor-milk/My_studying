@@ -16,7 +16,7 @@ def take_input_output_values(all_files, directory=basedir + '\\autotest'):
     for i in all_files:
         if i.isdigit():
             with open(directory + '\\' + i, 'rt', encoding='utf-8') as file:
-                input_values.append(file.read())
+                input_values.append(list(map(lambda x: x.strip(), file.read().split('\n'))))
         elif i.endswith('.clue'):
             with open(directory + '\\' + i, 'rt', encoding='utf-8') as file:
                 output_values.append(list(map(lambda x: x.strip(), file.read().split('\n'))))
