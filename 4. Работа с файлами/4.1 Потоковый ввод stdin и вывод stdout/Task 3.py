@@ -5,12 +5,18 @@ from datetime import datetime
 def main(inp_values, out_values):
     for inp_value, out_value in zip(inp_values, out_values):
         sys.stdin = inp_value
-        print(calculate_different(sys.stdin))
+        print(game(sys.stdin))
         print(*out_value)
         print()
 
-def calculate_different(stding):
-    lst = [datetime.strptime(i, '%Y-%m-%d') for i in stding.splitlines()]
-    return (max(lst) - min(lst)).days
+def game(stding):
+    lst = [int(i) for i in stding.splitlines()]
+    gamers = ['Дима', 'Анри']
+    if len(lst) % 2: #Нечетное?
+        gamers.reverse()
+    return gamers[lst[-1] % 2]
+
+
 inp, out = (take_input_output_values(take_all_files()))
 main(inp, out)
+#print(game(sys.stdin.read()))
