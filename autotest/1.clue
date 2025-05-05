@@ -1,12 +1,4 @@
-21.01.2021
-18.02.2021
-18.03.2021
-15.04.2021
-20.05.2021
-17.06.2021
-15.07.2021
-19.08.2021
-16.09.2021
-21.10.2021
-18.11.2021
-16.12.2021
+smaerd ym fo lla ekaT
+sgniw ruoy htob ffo ekaT
+erif no meht tes dnA
+erif no meht teS
