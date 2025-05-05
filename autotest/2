@@ -1,14 +1,11 @@
-n = int(input())
-l = [input() for _ in range(n)]
-k = int(input())
-search = [input() for _ in range(k)]
-output = []
-#в этих комментариях #нет смысла #спасите
-for i in l:
-    flag = True #могу закомментировать это
-    for j in search:  #и это
-        if j.lower() not in i.lower():
-            flag = False #и даже это
-    if flag:
-        output.append(i)   #никто меня не остановит #вообще
-print(*output, sep = '\n') #никогда
+import sys
+from datetime import date
+
+lis = [date(int(data.split('.')[2]), int(data.split('.')[1]), int(data.split('.')[0])) for data in sys.stdin]
+new_lis = sorted(lis, key=lambda d: d.toordinal())
+if new_lis == lis:
+    print("###")
+elif new_lis == lis[::-1]:
+    print("DESC")
+else:
+    print("MIX")

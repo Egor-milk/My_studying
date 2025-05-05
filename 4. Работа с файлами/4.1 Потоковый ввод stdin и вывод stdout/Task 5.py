@@ -5,12 +5,13 @@ from datetime import datetime
 def main(inp_values, out_values):
     for inp_value, out_value in zip(inp_values, out_values):
         sys.stdin = inp_value
-        print(comment(sys.stdin))
-        print(*out_value, sep='\n')
+        print(*comment(sys.stdin), sep='\n')
         print()
+        print(*out_value, sep='\n')
+        print('\n')
 
 def comment(stding):
-    return sum(map(lambda x: True if x.startswith('#') else False, [i.strip() for i in stding.splitlines()]))
+    return list(filter(lambda x: not x.strip().startswith('#'), stding.splitlines()))
 
 
 
