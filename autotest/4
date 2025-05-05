@@ -1,8 +1,7 @@
-s = [input() for _ in range(int(input()))] #never gonna
-d = [input() for _ in range(int(input()))]    #give you
-for i in s:   #up
-    for j in d: #never gonna
-        if j.lower() not in i.lower():                #let you
-            break               #down
-    else:
-        print(i)
+import sys
+for line in sys.stdin:
+    #keksiki#
+    if (line.lstrip(' ')[0] != '#'):
+        print(line.rstrip('\n'))#
+    #check....
+print('#')

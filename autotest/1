@@ -1,8 +1,12 @@
-s = str(input())
-k = 0
-#подсчитываем количество цифр
-for i in range(len(s)):
-    #проверяем каждый символ
-    if s[i] in '0123456789': #проверяем, является ли элемент строки цифрой
-        k += 1
-print(k)
+digit = int(input())
+s = input()
+for i in s:
+    #комментирую потому что прикольно
+
+    if 97 > ord(i) - digit:
+        temp = ord(i) - digit + 26
+        print(chr(temp), end='')   #вывод
+    else:
+        #ахаха
+        temp = ord(i) - digit
+        print(chr(temp), end='')
