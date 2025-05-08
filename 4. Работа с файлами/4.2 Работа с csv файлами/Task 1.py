@@ -1,16 +1,21 @@
-from autotest import take_all_files, take_input_output_values
+from autotest import basedir
 import sys
 import csv
 from datetime import datetime
 
-def main(inp_values):
-    for inp_value in inp_values:
-        test(inp_value)
 
-def test(stding):
-    pass
+#При попытке выполнить приведенную ниже программу возникает ошибка.
+# Найдите и исправьте ее, чтобы программа создала файл writing_test.csv,
+# имеющий следующее содержание:
+#first_col, second_col
+# value1, value2
 
+import csv
 
-inp, out = (take_input_output_values(take_all_files()))
-main(inp)
-#print(game(sys.stdin.read()))
+with open(basedir + '\\writing_test.csv', 'w', encoding='utf-8') as csv_file:
+    # создаем writer объект и указываем названия столбцов
+    writer = csv.DictWriter(csv_file, fieldnames=['first_col', 'second_col'])
+    # записываем первую строку с названиями столбцов
+    writer.writeheader()
+    # записываем строку с данными
+    writer.writerow({'first_col': 'value1', 'second_col': 'value2'})
