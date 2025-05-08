@@ -1,7 +1,5 @@
 from autotest import basedir
-import sys
 import csv
-from datetime import datetime
 
 
 #При попытке выполнить приведенную ниже программу возникает ошибка.
