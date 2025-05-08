@@ -2,19 +2,19 @@ import os
 # функции для автотестов как на степике
 
 basedir = os.path.abspath(os.getcwd())
-basedir = basedir[:basedir.find('My_studying') + 11]
+basedir = basedir[:basedir.find('My_studying') + 11] + '\\autotest'
 
 
-def take_all_files(directory=basedir + '\\autotest'):
+def take_all_files(directory=basedir):
     files = os.listdir(directory)
     return files
 
 
-def take_input_output_values(all_files, directory=basedir + '\\autotest'):
+def take_input_output_values(all_files, directory=basedir):
     input_values = []
     output_values = []
     for i in all_files:
-        if i.isdigit():
+        if i.isdigit() or i.endswith('.csv'):
             with open(directory + '\\' + i, 'rt', encoding='utf-8') as file:
                 input_values.append(file.read())
         elif i.endswith('.clue'):
