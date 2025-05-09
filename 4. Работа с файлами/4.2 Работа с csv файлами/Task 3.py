@@ -2,8 +2,6 @@ from autotest import basedir
 import csv
 
 with open(basedir + '\\salary_data.csv', 'rt', encoding='utf-8') as csvfile:
-    #rows = sorted(csv.DictReader(csvfile, delimiter=';'), key=lambda row: (int(row['salary']), row['company_name']))
-    #print(*rows, sep='\n')
     rows = list(csv.reader(csvfile, delimiter=';'))
     head, rows = rows[0], rows[1:]
     comp_dict = {}
