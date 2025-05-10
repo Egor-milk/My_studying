@@ -1,4 +1,3 @@
-
 from autotest import basedir
 import csv
 
