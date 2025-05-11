@@ -6,15 +6,14 @@ newest_names = {}
 with open(basedir + '\\name_log.csv', 'rt', encoding='utf-8') as file: #D:\programm\pycharm\My_studying\autotest
     d_reader = csv.DictReader(file, delimiter=',')
     for row in d_reader:
-        pass
-        #mail = row['email']
-        #date1 = datetime.strptime(row['dtime'], '%d/%m/%Y %H:%M')
-        #if mail in newest_names:
-        #    date2 = datetime.strptime(newest_names[mail], '%d/%m/%Y %H:%M')
-        #else:
-        #    date2 = datetime(1, 1, 1)
-        #if date1 > date2:
-        #    newest_names[mail] = [row['username'], row['dtime']]
+        mail = row['email']
+        date1 = datetime.strptime(row['dtime'], '%d/%m/%Y %H:%M')
+        if mail in newest_names:
+            date2 = datetime.strptime(newest_names[mail][1], '%d/%m/%Y %H:%M')
+        else:
+            date2 = datetime(1, 1, 1)
+        if date1 > date2:
+            newest_names[mail] = [row['username'], row['dtime']]
 
 with open(basedir + '\\new_name_log.csv', 'w', encoding='utf-8', newline='') as file:
     d_writer = csv.writer(file)
