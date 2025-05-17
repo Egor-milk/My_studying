@@ -1,19 +1,21 @@
-#True
-#int
-#str
-#int
-#float
-#str
+#Дополните приведенный ниже код, чтобы он вывел содержимое словаря countries,
+# расположив его элементы в лексикографическом порядке ключей,
+# указав в качестве разделителя пар ключ-значение строку   -  (пробел дефис пробел), а в качестве отступов — три пробела.
+
+#Примечание 1. Начальная часть ответа выглядит так:
+
+#{
+#   "Angola" - "Luanda",
+#   "Australia" - "Canberra",
+#   ...
+#Примечание 2. Используйте необязательные аргументы indent, separators и sort_keys.
+
 import json
-lines = {
-True: 97,
-2: "I've been running for a reason",
-"3": ("I", "could", "never", "retain"),
-4: ["Sweet", "lips", "like", "pink", "lemonade"],
-5.0: "When he's feeling generous he's gonna give me a taste",
-"six": "10"
-}
-lines_json = json.dumps(lines)
-lines = json.loads(lines_json)
-for i in lines:
-    print(i)
+
+countries = {'Monaco': 'Monaco', 'Iceland': 'Reykjavik', 'Kenya': 'Nairobi', 'Kazakhstan': 'Nur-Sultan',
+             'Mali': 'Bamako', 'Colombia': 'Bogota', 'Finland': 'Helsinki', 'Costa Rica': 'San Jose',
+             'Cuba': 'Havana', 'France': 'Paris', 'Gabon': 'Libreville', 'Liberia': 'Monrovia',
+             'Angola': 'Luanda', 'India': 'New Delhi', 'Canada': 'Ottawa', 'Australia': 'Canberra'}
+
+json_dumps = json.dumps(countries, separators=(',', ' - '), indent=3, sort_keys=True)
+print(json_dumps)
