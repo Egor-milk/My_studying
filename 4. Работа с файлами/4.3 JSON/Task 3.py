@@ -1,4 +1,6 @@
-#Вам доступны словари club1, club2 и club3, содержащие данные о различных футбольных клубах. Дополните приведенный ниже код, чтобы он объединил данные словари в список и записал полученную структуру данных в файл data.json, указав в качестве отступов три символа пробела.
+#Вам доступны словари club1, club2 и club3, содержащие данные о различных футбольных клубах.
+# Дополните приведенный ниже код, чтобы он объединил данные словари в список и записал полученную структуру данных
+# в файл data.json, указав в качестве отступов три символа пробела.
 
 #Примечание 1. Словари в списке должны располагаться в своем исходном порядке.
 
@@ -16,6 +18,7 @@
 
 
 import json
+from autotest import basedir
 
 club1 = {"name": "FC Byern Munchen", "country": "Germany", "founded": 1900,
          "trainer": "Julian Nagelsmann", "gaolkeeper": "M. Neuer", "league_position": 1}
@@ -25,3 +28,9 @@ club2 = {"name": "FC Barcelona", "country": "Spain", "founded": 1899,
 
 club3 = {"name": "FC Manchester United", "country": "England", "founded": 1878,
          "trainer": "Michael Carrick", "gaolkeeper": "D. De Gea", "league_position": 8}
+
+clubs = [club1, club2, club3]
+
+with open(basedir + '\\data.json', 'w') as file:
+    for i in clubs:
+        json.dump(i, file, indent=3)
