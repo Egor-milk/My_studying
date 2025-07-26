@@ -3,7 +3,7 @@ import json, csv
 from collections import defaultdict
 from datetime import datetime
 
-all_scores = defaultdict(list) #при обращении к best_scores[key1] создает список
+all_scores = defaultdict(list) #при обращении к all_scores[key1] создает key1:[]
 with open(basedir + '\\exam_results.csv', 'r', encoding='utf-8') as file_to_read:
     d_reader = csv.DictReader(file_to_read, delimiter=',')
     for line in d_reader:
