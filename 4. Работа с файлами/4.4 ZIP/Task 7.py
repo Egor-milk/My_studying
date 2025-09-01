@@ -24,8 +24,3 @@ with ZipFile(basedir + '\\' + 'files.zip', 'w') as zipF:
             zipF.write(basedir + '\\' + name,name) # второй аргумент задает новое имя файла в архиве, также удаляя все
                                                     # папки до файла (интересно зачем так)
 
-
-
-
-file_to_write = []
-
