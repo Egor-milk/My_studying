@@ -6,7 +6,6 @@
 from zipfile import ZipFile
 from autotest import basedir
 
-
 file_names = ['how to prove.pdf', 'fipi_demo_2022.pdf']
 
 with ZipFile(basedir + '\\' + 'file_names.zip', 'w') as file_names_zip:

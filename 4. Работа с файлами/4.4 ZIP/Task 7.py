@@ -17,19 +17,15 @@ from zipfile import ZipFile
 from autotest import basedir
 import os
 
-def extract_files(directory):
-    pass
-    #хуйня какая то вышла
+file_names = ['how to prove.pdf', 'fipi_demo_2022.pdf', '6 отряд.mp3']
+with ZipFile(basedir + '\\' + 'files.zip', 'w') as zipF:
+    for name in file_names:
+        if os.path.getsize(basedir + '\\' + name) <= 100100:
+            zipF.write(basedir + '\\' + name,name) # второй аргумент задает новое имя файла в архиве, также удаляя все
+                                                    # папки до файла (интересно зачем так)
 
 
 
-file_names = ['how to prove.pdf', 'fipi_demo_2022.pdf', 'Hollow Knight Silksong.exe',
-              'code.jpeg', 'stepik.png', 'readme.txt', 'shopping_list.txt',
-              'Alexandra Savior – Crying All the Time.mp3', 'homework.py','test.py']
 
 file_to_write = []
 
-
-with ZipFile(basedir + '\\' + 'file.zip', 'w') as zip_f:
-    for file in file_to_write:
-        zip_f.write(basedir + '\\' + file.filename)
