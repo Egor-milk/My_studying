@@ -1,6 +1,7 @@
 from autotest import basedir
 from zipfile import ZipFile
 import json
+import os
 
 def is_json(file):
     try:
@@ -10,4 +11,7 @@ def is_json(file):
     return True
 
 with ZipFile(basedir + '\\' + 'data.zip', 'r') as myzip:
-    pass
+    for i in myzip.namelist():
+        myzip.extract(i, basedir + '\\' + 'temp')
+        if not is_json(basedir + '\\' + 'temp'+ '\\' + i):
+            os.remove(basedir + '\\' + 'temp'+ '\\' + i)
