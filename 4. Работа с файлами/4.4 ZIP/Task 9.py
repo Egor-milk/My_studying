@@ -5,13 +5,14 @@ import os
 
 def is_json(file):
     try:
-        json_object = json.loads(file)
-    except ValueError:
+        with open(file) as json_data:
+            json_object = json.load(json_data)
+    except:
         return False
     return True
 
 with ZipFile(basedir + '\\' + 'data.zip', 'r') as myzip:
     for i in myzip.namelist():
-        myzip.extract(i, basedir + '\\' + 'temp')
-        if not is_json(basedir + '\\' + 'temp'+ '\\' + i):
-            os.remove(basedir + '\\' + 'temp'+ '\\' + i)
+        path = (basedir + '\\' + i).replace('/', '\\')
+        print(is_json(path))
+
