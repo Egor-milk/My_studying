@@ -16,7 +16,7 @@ def extract_flattened():
 
     with ZipFile(path_to_zip, 'r') as zip_file:
         for zip_info in zip_file.infolist():
-            # Пропускаем директории
+            # Пропускаем директории и файлы не json
             if zip_info.is_dir() or not zip_info.filename.endswith('.json'):
                 continue
 
@@ -27,24 +27,31 @@ def extract_flattened():
             zip_info.filename = filename
 
             # Извлекаем
-            zip_file.extract(zip_info, path_to_unzip)
+            zip_file.extract(zip_info, path_to_unzip) #Окзаывется экстракт можно использовать и так, с объектом infolist
             print(f"Извлечен: {filename}")
 
+def delete_invalid_json(path):
+
+
+    for i in os.listdir(path):
+        if not is_json(i):
+            os.remove(os.path.join(path, i))
 
 
 def is_json(file):
     try:
-        with open(file) as json_data:
-            json_object = json.load(json_data)
+        json_object = json.loads(file)
     except:
         return False
     return True
 
-for i in os.listdir(path_to_unzip):
-    if not is_json(i):
-        os.remove(os.path.join(path_to_unzip, i))
+answer = []
+with ZipFile(path_to_zip, 'r') as zip_file:
+    for file_name in zip_file.namelist():
+        if file_name.endswith('.json'):
+            with zip_file.open(file_name) as f:
+                if is_json(file_name):
+                    answer.append(file_name)
 
-extract_flattened()
+print(answer)
 
-#print(is_json('D://programm//pyc
-#harm//My_studying//autotest//player2.json'))
