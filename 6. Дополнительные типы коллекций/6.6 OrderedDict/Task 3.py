@@ -1,4 +1,4 @@
-#Вам доступна переменная data, содержащая OrderedDict словарь.
+#Вам доступна переменная data, содержащая OrderedDict словарь. ШАГ 19
 # Дополните приведенный ниже код, чтобы он добавил этому словарю два атрибута:
 #sorted_keys() — функция, которая возвращает отсортированный по возрастанию список ключей словаря data
 #sorted_values() — функция, которая возвращает отсортированный по возрастанию список значений словаря data
@@ -48,7 +48,7 @@ data = OrderedDict({'Law & Order': 1990, 'The Practice': 1997, 'Six Feet Under':
 data.sorted_keys = lambda reverse=False: sorted(data.keys(), reverse=reverse)
 data.sorted_values = lambda reverse=False: sorted(data.values(), reverse=reverse)
 
-print(data.sorted_values(True))
+print(data.sorted_values())
 
 
 
